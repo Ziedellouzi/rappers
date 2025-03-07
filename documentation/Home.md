@@ -2,9 +2,7 @@
 
 Ce projet vise à étudier les relations et les dynamiques sociales entre les rappeurs américains, à travers leurs collaborations musicales, les rivalités, les influences des labels, et l'impact des récompenses (comme les Grammy Awards). Nous chercherons à comprendre comment ces éléments interagissent pour façonner l'industrie musicale, la carrière des artistes et l'évolution du genre.
 
-## Système d'information
 
-[Table des matières](Table_des_pages.md) qui liste toutes les pages du wiki.
 
 ### Phase exploratoire
 
