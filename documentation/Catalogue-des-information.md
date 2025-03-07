@@ -30,7 +30,7 @@
 - nom de l'album / chanson
 - année de sortie
 - lieu de production / enregistrement
-- collaboration(s) avec d'autres artistes
+- collaborations avec d'autres artistes
 - genre musical
 - impact sur l'industrie musicale ou la culture populaire
 
