@@ -8,5 +8,5 @@ Ce projet vise à étudier les relations et les dynamiques sociales entre les ra
 
 * [Problématique et questionnement](Problematique-Questionnement.md)
 * [Liste des rappeurs américains](Listes-des-rappeurs.md)
-* [Catalogue des relations entre rappeurs](Catalogue-des-relations.md)
+* [Catalogue des information](Catalogue-des-information.md)
 
