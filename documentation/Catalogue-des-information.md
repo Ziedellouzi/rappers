@@ -46,5 +46,5 @@ N.B. Il s'agit de quelques exemples ; il existe de nombreuses autres relations p
 - personne (rappeur) est originaire de lieu (quartier, ville)
 - œuvre (album, chanson) a pour auteur personne (rappeur)
 - œuvre (album, chanson) a lieu de production (studio, ville)
-- œuvre (clip vidéo) est diffusée sur plateforme de média (ex : YouTube, MTV)
+- œuvre (clip vidéo) est diffusée sur plateforme de média (ex : YouTube, Spotify etc.)
 
