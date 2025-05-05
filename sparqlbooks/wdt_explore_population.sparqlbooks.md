@@ -55,8 +55,6 @@ WHERE {
 
     BIND(REPLACE(str(?birthDate), "(.*)([0-9]{4})(.*)", "$2") AS ?year)
     ### Experiment with different time filters if too many values
-    FILTER(xsd:integer(?year) > 1750  && xsd:integer(?year) < 1951)
-    # FILTER(xsd:integer(?year) > 1850  && xsd:integer(?year) < 1951)
 
 }
 GROUP BY ?p 
