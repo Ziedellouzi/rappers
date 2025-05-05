@@ -73,3 +73,20 @@ SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 ORDER BY DESC(?eff)
 # LIMIT 20
 ````
+compter combien de proprietés sont valable pour la population des rappeurs (mieux) 
+````sparql
+SELECT ?p ?propLabel (COUNT(*) as ?eff)
+WHERE {
+  {  ?item wdt:P31 wd:Q5;  # Any instance of a human.
+          wdt:P106 wd:Q2252262. }
+     ?item ?p ?o .
+  # get the original property (in the the statement construct)     
+?prop wikibase:directClaim ?p .
+
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+         # Rapper 
+} 
+Group BY ?p ?propLabel
+ORDER BY DESC(?eff) 
+# LIMIT 20
+````
