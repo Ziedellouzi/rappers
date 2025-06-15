@@ -1,6 +1,9 @@
 # Import fields of activity of persons
 
-````sparql
+
+In this notebook we import fields of activity of our populations and try to find ways to aggregate them
+
+```sparql
 ### Number of persons 
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -11,8 +14,9 @@ WHERE {
         {?s a wd:Q5.}
 }
 
-````
-````sparql
+```
+
+```sparql
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
@@ -26,10 +30,11 @@ WHERE {
 ORDER BY ?s
 LIMIT 3
 
-````
-## Fields 
-````sparql
-## Explore all fields
+```
+## Fields
+
+```sparql
+## Explore fields
 
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -64,8 +69,9 @@ WHERE
 ORDER BY ?item ?field
 limit 20
 
-````
-````sparql
+```
+
+```sparql
 ## Explore fields
 
 PREFIX wd: <http://www.wikidata.org/entity/>
@@ -84,7 +90,7 @@ WHERE
                 {?item a wd:Q5}
         ORDER BY ?item      
         #OFFSET 10000
-        #OFFSET 20000
+        OFFSET 20000
        LIMIT 10000
 
         }
@@ -96,8 +102,9 @@ WHERE
                 
         }
 
-````
-````sparql
+```
+
+```sparql
 ## Group and count
 
 PREFIX wd: <http://www.wikidata.org/entity/>
@@ -136,8 +143,9 @@ GROUP BY ?field ?fieldLabel
 ORDER BY DESC(?n)
 LIMIT 20
 
-````
-````sparql
+```
+
+```sparql
 ## Group and count
 
 PREFIX wd: <http://www.wikidata.org/entity/>
@@ -151,7 +159,6 @@ SELECT ?field ?fieldLabel ?fieldClassLabel (COUNT(*) as ?n)
 WHERE
     {
         GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
-
         ## Find the persons in the imported graph
         {SELECT ?item
         WHERE 
@@ -180,9 +187,10 @@ GROUP BY ?field ?fieldLabel ?fieldClassLabel
 ORDER BY DESC(?n)
 LIMIT 20
 
-````
+```
 ### Import data
-````sparql
+
+```sparql
 ### Prepare the data to be imported
 # With LIMIT clause 
 ## Apparently labels are not repeated if already available
@@ -219,9 +227,13 @@ WHERE
             }
                 
         }
-````
-````sparql
+```
+
+```sparql
 ### This insert query has to be carried out directly on the Allegrograph server
+## Also, you have to carry it out in three steps. The accepted limit by Wikidata 
+## of instances in a variable ('item' in our case) appears to be 10000.
+## You therefore have to have three steps for a population of around 23000 persons  
 
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -242,7 +254,7 @@ WHERE
         ORDER BY ?item      
         #OFFSET 10000
         #OFFSET 20000
-        #OFFSET 30000
+        OFFSET 30000
         LIMIT 10000
 
         }
@@ -255,8 +267,9 @@ WHERE
             }
                 
         }
-````
-````sparql
+```
+
+```sparql
 ### Insert the label of the property
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
@@ -267,11 +280,14 @@ INSERT DATA {
   GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
   {wdt:P101 rdfs:label 'field'.}
 }
-````
+```
 ### Add the field class
-````sparql
+
+This is not properly speaking a class, but we use it here as such: wd:Q12737077
+
+```sparql
 ###  Inspect the fields:
-# number of different fields 
+# number of different fields
 
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
@@ -289,10 +305,9 @@ WHERE
          }
       }
    }
+```
 
-# number of different fields : 381
-````
-````sparql
+```sparql
 ### Insert the class 'field of work' for all the fields
 # Please note that strictly speaking Wikidata has no ontology,
 # therefore no classes. We add this for our convenience
@@ -317,9 +332,10 @@ WHERE
          }
       }
    }
-````
-````sparql
-### Add label for concept field
+```
+
+```sparql
+### Ajouter le label pour le concept field
 
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -333,9 +349,12 @@ GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported
 }
 
 
-````
+```
 ### Inspect the available information
-````sparql
+
+With the queries [in this sparqlbook](wdt_available_information.sparqlbook) you can inspect the available information
+
+```sparql
 ### Basic query about persons' field
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -354,11 +373,16 @@ WHERE {
 GROUP BY ?field ?fieldLabel 
 ORDER BY DESC(?n)
 LIMIT 10
-````
-# The following part is to be repeated
+```
+# La partie suivante est à reprendre
+
+
 ## Get the fields' parent fields ('classes')
-Given the dispersion of fields, we try to obtain parent terms of fields to see if some groupings are possible.
-````sparql
+
+
+Given the dispersion of fields observed in the [analysis notebook](../notebooks_jupyter/wikidata_exploration/wdt_fields_triplestore_exploration.ipynb), we try to obtain parent terms of fields to see if some groupings are possible.
+
+```sparql
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -368,12 +392,13 @@ PREFIX bd: <http://www.bigdata.com/rdf#>
 
 SELECT (COUNT(*) as ?n)
 WHERE {
-        GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
         {?item a wd:Q12737077.}
         }
          
-````
-````sparql
+```
+
+```sparql
 ## 
 
 PREFIX wd: <http://www.wikidata.org/entity/>
@@ -408,8 +433,9 @@ GROUP BY ?field ?fieldLabel
 ORDER BY DESC(?n)
 LIMIT 20
 
-````
-````sparql
+```
+
+```sparql
 ## Prepare import
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -450,9 +476,22 @@ WHERE
 ORDER BY DESC(?item)
 LIMIT 5
 
-````
+```
 ### Insert parent fields
-````sparql
+
+**WARNING** : if you repeat this INSERT query more than once, each time you will add one more level in the hierarchy of fields.
+
+I repeated the INSERT *three times*, so I have three levels in my data.
+
+The levels become the facto more then three because some higher level terms are used in the first and second levels, and then augmente with their parent and ancestors.
+
+**IMPORTANT** : execute the classification levels' queries below after each insert and observe what happens
+
+You will be able to observe that there are multiple parallel classifications in Wikidata, and the fact that of using the same class and parenthood property adds more levels than expected!
+
+You can then transverse these levels with property paths.
+
+```sparql
 ### Insert the label of the property
 
 ## This is needed just once
@@ -466,8 +505,9 @@ INSERT DATA {
   GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
   {wdt:P279 rdfs:label 'subclass of'.}
 }
-````
-````sparql
+```
+
+```sparql
 ### INSERT
 
 ## IMPORTANT : execute the classification levels' queries below 
@@ -511,9 +551,10 @@ WHERE
 
 
 
-````
+```
 ### Inspect imported data
-````sparql
+
+```sparql
 ### Propriétés des fields: outgoing
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -532,8 +573,9 @@ WHERE {
 }
 GROUP BY ?p ?label
 ORDER BY DESC(?n)
-````
-````sparql
+```
+
+```sparql
 ### field classifications
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -556,9 +598,10 @@ WHERE {
 }
 ORDER BY ?s
 LIMIT 10
-````
-### First classification level
-````sparql
+```
+#### First classification level
+
+```sparql
 ### First classification level
 
 # filled after first insert
@@ -585,9 +628,10 @@ WHERE {
 GROUP BY ?parentfield ?parentfieldlabel 
 ORDER BY DESC(?n)
 LIMIT 20
-````
-### Second classification level
-````sparql
+```
+#### Second classification level
+
+```sparql
 ### Second classification level
 
 # no result after first insert
@@ -613,9 +657,10 @@ WHERE {
 GROUP BY ?parentfield ?parentfieldlabel 
 ORDER BY DESC(?n)
 LIMIT 20
-````
-Third classification level
-````sparql
+```
+#### Third classification level
+
+```sparql
 ### Third classification level
 
 # no result after first insert
@@ -643,8 +688,9 @@ WHERE {
 GROUP BY ?parentfield ?parentfieldlabel 
 ORDER BY DESC(?n)
 LIMIT 20
-````
-````sparql
+```
+
+```sparql
 ### Third classification level
 
 # explicit query path to check
@@ -679,9 +725,10 @@ WHERE {
 GROUP BY ?parentfield ?parentfieldlabel 
 ORDER BY DESC(?n)
 LIMIT 20
-````
-Fourth classification level
-````sparql
+```
+#### Fourth classification level
+
+```sparql
 ### Fourth classification level
 
 # no result after first insert
@@ -717,9 +764,14 @@ WHERE {
 GROUP BY ?parentfield ?parentfieldlabel 
 ORDER BY DESC(?n)
 LIMIT 20
-````
-### Test: get rid of the classifications and restart
-````sparql
+```
+### Test: get rid of the classifications and restart
+
+**Beware**, the created parent and ancestor fields will also be deleted
+
+**Beware**, do not execute theses queries after you added *instance of* 'classes' to the fields 
+
+```sparql
 ### First classification level
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -738,12 +790,36 @@ WHERE {
           }
 }
 LIMIT 20
-````
-I didn't do the DELET
-````sparql
-````
-### Inspect the instance of metaclasses to fields
-````sparql
+```
+
+```sparql
+### Delete all classifications, any level
+
+## Execute directly in Allegrograph
+
+PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+WITH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
+# Protection #  DELETE {?s  wdt:P279 ?o .
+    ?o rdfs:label ?fieldLabel.
+    # rdf:type field
+    ?o a wd:Q12737077.}
+WHERE {
+        {
+            ## retrieves all the classifications:
+            ?s wdt:P279 ?o.
+          }
+}
+```
+## Inspect the *instance of* metaclasses to fields
+
+**CAUTION** : add these classifications ONLY after you are finished with your two (or more) inserts of fields as parents of other fields
+
+```sparql
 ## 
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -780,10 +856,17 @@ WHERE
 ORDER BY DESC(?n)
 LIMIT 30
 
-````
-## Inspect parent fields 
+```
+**CONCLUSION**
+
+We observe that this kind of classification does not allow to separate scientific and other fields.
+
+We do not therefore move further in this direction
+## Inspect parent fields fields
+
 The aim is to find a way to distinguish between fields
-````sparql
+
+```sparql
 ### Find fields and parent fields of parent fields
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -841,8 +924,9 @@ GROUP BY ?field ?fieldLabel
           ?parentKnowledgeClassification ?parentKnowledgeClassificationLabel
 ORDER BY DESC(?n)
 LIMIT 20
-````
-````sparql
+```
+
+```sparql
 ### Simplified query
 
 PREFIX franzOption_defaultDatasetBehavior: <franz:rdf>
@@ -893,8 +977,17 @@ WHERE {
           # ?parentKnowledgeClassification ?parentKnowledgeClassificationLabel 
 ORDER BY DESC(?n)
 LIMIT 30
-````
-````sparql
+```
+## A faire
+
+* ajouter les 'metaclasses'
+* ajouter les classes de metaclasses: metaclass, second-order class
+* vérifier l'association de fields à metaclasses
+* vérifier si les metaclasses permettent de classer
+* vérifier si toute personne a des fields dans les principales metaclasses
+* préparer des requêtes pour l'analyse
+
+```sparql
 ### Create pairs of fields 
 # and add the birth year of the person
 
@@ -909,7 +1002,6 @@ SELECT ?item ?birthYear ?field ?fieldLabel ?field_1 ?field_1Label
 WHERE
     {
         GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
-
         ## Find the persons in the imported graph
         {SELECT ?item ?birthYear
         WHERE 
@@ -934,3 +1026,6 @@ WHERE
             }
                 
         }
+
+
+```
