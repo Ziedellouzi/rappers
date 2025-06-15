@@ -110,7 +110,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 INSERT {
 
         ### Note that the data is imported into a named graph and not the DEFAULT one
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?item  rdfs:label ?itemLabel.
            ?item wdt:P21 ?gender.
            ?item wdt:P569 ?year. 
@@ -125,19 +125,13 @@ INSERT {
         ## please note the service address            
         SERVICE <https://query.wikidata.org/sparql>
             {
-            {?item wdt:P106 wd:Q11063}  # astronomer
-            UNION
-            {?item wdt:P101 wd:Q333}     # astronomy
-            UNION
-            {?item wdt:P106 wd:Q169470}  # physicist
-            UNION
-            {?item wdt:P101 wd:Q413}     # physics   
-          
+            {?item wdt:P106  wd:Q2252262}  # astronomer
+        
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
                 wdt:P569 ?birthDate;
                 wdt:P21 ?gender.
         BIND(year(?birthDate) as ?year)
-        FILTER(?year > 1750  && ?year < 2001) 
+        #FILTER(?year > 1750  && ?year < 2001) 
 
         ## Add this clause in order to fill the variable      
         BIND ( ?itemLabel as ?itemLabel)
@@ -159,7 +153,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 INSERT DATA {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
     {
         wd:Q5 rdfs:label "Person".
     }
@@ -182,7 +176,7 @@ WHERE
    {
    SELECT DISTINCT ?gender
    WHERE {
-      GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+      GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
          {
             ?s wdt:P21 ?gender.
          }
@@ -199,7 +193,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-WITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+WITH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
 INSERT {
    ?gender rdf:type wd:Q48264.
 }
@@ -221,7 +215,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 INSERT DATA {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
     {
         wd:Q48264 rdfs:label "Gender Identity".
     }
@@ -234,7 +228,7 @@ INSERT DATA {
 ### Number of triples in the graph
 SELECT (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>>
         {?s ?p ?o}
 }
 ```
@@ -243,7 +237,7 @@ WHERE {
 ### Number of persons with more than one label : no person
 SELECT (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?s rdf:label ?o}
 }
 GROUP BY ?s
@@ -258,7 +252,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?s (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?s wdt:P21 ?gen}
 }
 GROUP BY ?s
@@ -272,7 +266,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?gen (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?s wdt:P21 ?gen}
 }
 GROUP BY ?gen
@@ -286,7 +280,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 SELECT ?gen (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?s wdt:P21 ?gen;
             wdt:P569 ?birthDate.
         FILTER (?birthDate < '1900')     
@@ -314,7 +308,7 @@ WHERE {
 
     {SELECT DISTINCT ?gen
     WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>    
+        GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
             {?s wdt:P21 ?gen}
     }
     }   
@@ -347,7 +341,7 @@ WHERE {
 
     {SELECT DISTINCT ?gen
     WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>    
+        GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md> 
             {?s wdt:P21 ?gen}
     }
     }   
@@ -370,7 +364,7 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-WITH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md> 
+WITH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
 INSERT {
      ?gen rdfs:label ?genLabel
     
@@ -379,7 +373,7 @@ WHERE {
 
     {SELECT DISTINCT ?gen
     WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>    
+        GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
             {?s wdt:P21 ?gen}
     }
     }   
@@ -407,7 +401,7 @@ WHERE
     {
     SELECT ?gen (COUNT(*) as ?n)
         WHERE {
-            GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>  
+            GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
                     {
             ?s wdt:P21 ?gen.
             }
@@ -428,7 +422,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?s ?label ?birthDate ?genLabel
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {
             ## A property path passes through 
             # two or more properties
@@ -450,7 +444,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT (COUNT(*) as ?n)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {
           # ?s wdt:P31 wd:Q5 
           ?s a wd:Q5
@@ -469,7 +463,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT  ?s (MAX(?label) as ?label) (xsd:integer(MAX(?birthDate)) as ?birthDate) 
     (MAX(?gen) as ?gen) (MAX(?genLabel) AS ?genLabel)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?s wdt:P21 ?gen;
             rdfs:label ?label;
             wdt:P569 ?birthDate.
@@ -493,7 +487,7 @@ WHERE {
 SELECT  ?s (MAX(?label) as ?label) (xsd:integer(MAX(?birthDate)) as ?birthDate) 
             (MAX(?gen) as ?gen) (MAX(?genLabel) AS ?genLabel)
 WHERE {
-    GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?s wdt:P21 ?gen;
             rdfs:label ?label;
             wdt:P569 ?birthDate.
@@ -511,7 +505,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 INSERT DATA {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
 {    wdt:P569 rdfs:label "date of birth"
 }    
 }
@@ -527,7 +521,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 INSERT DATA {
-GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
 {    wdt:P21 rdfs:label "sex or gender"
 }    
 }
