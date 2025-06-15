@@ -19,20 +19,15 @@ SELECT DISTINCT ?item  ?itemLabel  ?gender ?year
         ## note the service address            
         SERVICE <https://query.wikidata.org/sparql>
             {
-            {?item wdt:P106 wd:Q11063}  # astronomer
-            UNION
-            {?item wdt:P101 wd:Q333}     # astronomy
-            UNION
-            {?item wdt:P106 wd:Q169470}  # physicist
-            UNION
-            {?item wdt:P101 wd:Q413}     # physics   
+            {?item wdt:P106  wd:Q2252262}  # astronomer
+               
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
                 wdt:P569 ?birthDate;
                 wdt:P21 ?gender.
         BIND(year(?birthDate) as ?year)
         #BIND(REPLACE(str(?birthDate), "(.*)([0-9]{4})(.*)", "$2") AS ?year)
-        FILTER(xsd:integer(?year) > 1750 && xsd:integer(?year) < 2001) )
+        #FILTER(xsd:integer(?year) > 1750 && xsd:integer(?year) < 2001) )
         
 
         ## Add this clause in order to fill the variable      
@@ -71,20 +66,14 @@ CONSTRUCT
         ## note the service address            
         SERVICE <https://query.wikidata.org/sparql>
             {
-            {?item wdt:P106 wd:Q11063}  # astronomer
-            UNION
-            {?item wdt:P101 wd:Q333}     # astronomy
-            UNION
-            {?item wdt:P106 wd:Q169470}  # physicist
-            UNION
-            {?item wdt:P101 wd:Q413}     # physics   
+            {?item wdt:P106  wd:Q2252262}   
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
                 wdt:P569 ?birthDate;
                 wdt:P21 ?gender.
         BIND(year(?birthDate) as ?year)
         #BIND(xsd:integer(REPLACE(str(?birthDate), "(.*)([0-9]{4})(.*)", "$2")) AS ?year)
-        FILTER(?year > 1750  && ?year < 2001) 
+        #FILTER(?year > 1750  && ?year < 2001) 
 
         ## Add this clause in order to fill the variable      
         BIND ( ?itemLabel as ?itemLabel)
