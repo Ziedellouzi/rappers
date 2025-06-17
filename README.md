@@ -1,5 +1,5 @@
 ## rappers 
-# 📌 Analyse des Rapports entre Rappeurs Américains à l’aide de Méthodes Numériques 
+# 📌 Analyse des Rapports entre Rappeurs à l’aide de Méthodes Numériques 
 
 
 Ce projet s’inscrit dans le cadre du cours **"Application de méthodes numériques pour les sciences humaines et historiques"**.  
