@@ -1,4 +1,4 @@
-*  grammy award (album of the year) (dbpedia  
+*  grammy award (album of the year) (dbpedia) 
   
   ```sparql
   
