@@ -1,4 +1,4 @@
-* le nombre des rappeurs ayants un grammy award (album of the year) ( en total 109)
+*  grammy award (album of the year) (dbpedia  
   
   ```sparql
   
