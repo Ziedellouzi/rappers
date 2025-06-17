@@ -10,5 +10,5 @@ Ce projet vise à étudier les relations et les dynamiques sociales entre les ra
 * [Liste des rappeurs ](Listes-des-rappeurs.md)
 * [Catalogue des information](Catalogue-des-information.md)
 
-### Retrieval and analysis of existing data
+### Analyse des données existantes
 * [Exploring DBpedia\wikidata](https://github.com/Ziedellouzi/rappers/blob/main/documentation/DBpedia%5C%20wikidata_explorer.md)
