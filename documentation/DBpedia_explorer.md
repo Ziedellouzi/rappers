@@ -1,4 +1,4 @@
-* The number of Nobel Prize in Physics winners (in total 163)
+* le nombre des rappeurs ayant un grammy award (album od the year) ( en total 109)
   
   ```sparql
   PREFIX dbr: <http://dbpedia.org/resource/>
