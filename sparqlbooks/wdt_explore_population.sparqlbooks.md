@@ -20,7 +20,7 @@ WHERE {
 }
 ORDER BY ?birthDate
 ````
-compter les rappeurs né apres 1751
+compter les rappeurs 
 ````sparql
 ### Modern rappers : born from 1751 onward
 SELECT (count(*) as ?number)
@@ -31,7 +31,7 @@ WHERE {
             wdt:P569 ?birthDate.
 
     BIND(REPLACE(str(?birthDate), "(.)([0-9]{4})(.)", "$2") AS ?year)
-    FILTER(xsd:integer(?year) > 1750 )
+    
 }
 ````
 compter combien de proprietés sont valable pour la population des rappeurs
