@@ -18,5 +18,6 @@ En exploitant ces relations, nous chercherons à mieux comprendre la structure d
 Les données seront extraites principalement de Wikipédia :  
 - [📌 Liste des rappeurs ](https://fr.wikipedia.org/wiki/Cat%C3%A9gorie:Rappeur_am%C3%A9ricain)  
 - [🏆 Rappeurs ayant remporté un Grammy Award](https://fr.wikipedia.org/wiki/Grammy_Award_de_la_meilleure_prestation_rap_m%C3%A9lodique) 
-## - [📚 home page]
+__________________________
+ - [📚 home page]
 (https://github.com/Ziedellouzi/rappers/blob/main/documentation/Home.md)
