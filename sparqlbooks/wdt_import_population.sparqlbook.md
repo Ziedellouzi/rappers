@@ -19,7 +19,7 @@ SELECT DISTINCT ?item  ?itemLabel  ?gender ?year
         ## note the service address            
         SERVICE <https://query.wikidata.org/sparql>
             {
-            {?item wdt:P106  wd:Q2252262}  # astronomer
+            {?item wdt:P106  wd:Q2252262} 
                
           
             ?item wdt:P31 wd:Q5;  # Any instance of a human.
