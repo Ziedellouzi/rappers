@@ -515,22 +515,21 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-
-SELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?citizenshipLabel; separator=", ") AS ?countries )
+SELECT ?item (COUNT(*) as ?n) (GROUP_CONCAT(?citizenshipLabel; separator=", ") AS ?countries)
 WHERE {
-GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
-{
-   ?item wdt:P27 ?citizenship.
+  GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md> {
+    ?item wdt:P27 ?citizenship.
     ?citizenship rdfs:label ?citizenshipLabel.
-}
-
+  }
 }
 GROUP BY ?item
 HAVING (?n > 1)
 ORDER BY DESC(?n)
 OFFSET 10
 LIMIT 5
+
 ```
 
 ```sparql
