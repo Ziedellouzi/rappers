@@ -1,6 +1,6 @@
 # Import fields of activity of persons
 
-
+# Remarque : J'ai remplacé `P101` (Domaine de travail) par `P106` (Profession) car `P106` est plus couramment utilisé pour catégoriser les professions, telles que "rappeur", tandis que `P101` est généralement réservé aux domaines plus larges comme les disciplines académiques ou les secteurs d'activité. Ce changement permet une récupération plus précise des données concernant les professions dans le cadre de ce projet.
 In this notebook we import fields of activity of our populations and try to find ways to aggregate them
 
 ```sparql
