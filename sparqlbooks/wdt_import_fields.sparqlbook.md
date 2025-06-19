@@ -390,7 +390,7 @@ PREFIX bd: <http://www.bigdata.com/rdf#>
 
 SELECT (COUNT(*) as ?n)
 WHERE {
-        GRAPH <https://github.com/Sciences-historiques-numeriques/astronomers/blob/main/graphs/wikidata-imported-data.md>
+        GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
         {?item a wd:Q12737077.}
         }
          
