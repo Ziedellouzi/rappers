@@ -748,30 +748,31 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-
-SELECT ?item (COUNT(*) as ?n) ( GROUP_CONCAT(?continentLabel; separator=", ") AS ?continents )
-    ( GROUP_CONCAT(?countryLabel; separator=", ") AS ?countries )
+SELECT ?item (COUNT(*) as ?n)
+       (GROUP_CONCAT(?continentLabel; separator=", ") AS ?continents)
+       (GROUP_CONCAT(?countryLabel; separator=", ") AS ?countries)
 WHERE {
-    SELECT DISTINCT ?item ?continentLabel ?coutryLabel
-    WHERE 
-        {
-        GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
-            {
-            ?item wdt:P27 ?country.
-            ?country wdt:P30 ?continent;
-                rdfs:label ?countryLabel.
-            ?continent rdfs:label ?continentLabel.
-            ## Excluding Eurasia, Australia and Oceania insular
-            FILTER ( ?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))
-            }
-        }
+  SELECT DISTINCT ?item ?continentLabel ?countryLabel
+  WHERE {
+    GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md> {
+      ?item wdt:P27 ?country.
+      ?country wdt:P30 ?continent.
+      ?country rdfs:label ?countryLabel.
+      ?continent rdfs:label ?continentLabel.
+      
+      ## Exclude Eurasia (Q538), Australia (Q3960), Oceania (Q5401)
+      FILTER (?continent NOT IN (wd:Q538, wd:Q3960, wd:Q5401))
+    }
+  }
 }
 GROUP BY ?item
-#HAVING (?n > 1)
+HAVING (?n > 1)
 ORDER BY DESC(?n)
-#OFFSET 10
+OFFSET 0
 LIMIT 10
+
 ```
 
 ```sparql
