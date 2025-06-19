@@ -60,7 +60,7 @@ WHERE
         ## 
         SERVICE <https://query.wikidata.org/sparql>
             {
-                ?item wdt:P101 ?field.
+                ?item wdt:P106 ?field.
                 BIND (?fieldLabel as ?fieldLabel)
                 SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
             }
@@ -97,7 +97,7 @@ WHERE
         ## 
         SERVICE <https://query.wikidata.org/sparql>
             {
-                ?item wdt:P101 ?field .
+                ?item wdt:P106 ?field .
             }
                 
         }
@@ -133,7 +133,7 @@ WHERE
         ## 
         SERVICE <https://query.wikidata.org/sparql>
             {
-                ?item wdt:P101 ?field.
+                ?item wdt:P106 ?field.
                 BIND (?fieldLabel as ?fieldLabel)
                 SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
             }
@@ -174,7 +174,7 @@ WHERE
         SERVICE <https://query.wikidata.org/sparql>
             {
                 # field
-                ?item wdt:P101 ?field.
+                ?item wdt:P106 ?field.
                 # instance of
                 ?field wdt:P31 ?fieldClass.
                 BIND (?fieldLabel as ?fieldLabel)
@@ -203,7 +203,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 
-CONSTRUCT {?item wdt:P101 ?field.
+CONSTRUCT {?item wdt:P106 ?field.
             ?field rdfs:label ?fieldLabel}
 WHERE
     {
@@ -221,7 +221,7 @@ WHERE
         ## 
         SERVICE <https://query.wikidata.org/sparql>
             {
-                ?item wdt:P101 ?field.
+                ?item wdt:P106 ?field.
                 BIND (?fieldLabel as ?fieldLabel)
                 SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
             }
@@ -243,7 +243,7 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 
 WITH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
-INSERT {?item wdt:P101 ?field.
+INSERT {?item wdt:P106 ?field.
          ?field rdfs:label ?fieldLabel}
 WHERE
     {
@@ -261,7 +261,7 @@ WHERE
         ## 
         SERVICE <https://query.wikidata.org/sparql>
             {
-                ?item wdt:P101 ?field.
+                ?item wdt:P106 ?field.
                 BIND (?fieldLabel as ?fieldLabel)
                 SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
             }
@@ -278,7 +278,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
 INSERT DATA {
   GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
-  {wdt:P101 rdfs:label 'field'.}
+  {wdt:P106 rdfs:label 'field'.}
 }
 ```
 ### Add the field class
@@ -301,7 +301,7 @@ WHERE
    WHERE {
       GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
          {
-            ?s wdt:P101 ?field.
+            ?s wdt:P106 ?field.
          }
       }
    }
@@ -328,7 +328,7 @@ WHERE
    SELECT DISTINCT ?field
    WHERE {
          {
-            ?s wdt:P101 ?field.
+            ?s wdt:P106 ?field.
          }
       }
    }
@@ -366,7 +366,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?field ?fieldLabel (COUNT(*) as ?n)
 WHERE {
     GRAPH <https://github.com/Ziedellouzi/rappers/blob/main/graphs/wikidata-imported-data.md>
-        {?item wdt:P101 ?field.
+        {?item wdt:P106 ?field.
         OPTIONAL {?field rdfs:label ?fieldLabel}    
           }
 }
