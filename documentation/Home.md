@@ -1,6 +1,6 @@
 # Le champ du rap : Une étude des relations et des collaborations entre les rappeurs
 
-Ce projet vise à étudier les relations et les dynamiques sociales entre les rappeurs , à travers leurs collaborations musicales, les rivalités, les influences des labels, et l'impact des récompenses (comme les Grammy Awards). Nous chercherons à comprendre comment ces éléments interagissent pour façonner l'industrie musicale, la carrière des artistes et l'évolution du genre.
+Ce projet vise à étudier les relations et les dynamiques sociales entre les rappeurs , à travers les informations fournies( les date de naissance les pays de naissance , les influences des labels et des genres musicale sur les récompenses (comme les Grammy Awards). Nous chercherons à comprendre comment ces éléments interagissent pour façonner l'industrie musicale, la carrière des artistes et l'évolution du genre.
 
 
 
