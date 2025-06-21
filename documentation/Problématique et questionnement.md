@@ -1,6 +1,6 @@
 ## Problématique
 
-En adoptant une démarche exploratoire, il s'agit de proposer un modèle du champ musical du rap américain, c'est-à-dire une représentation simplifiée de la structure de l'industrie du rap et de son évolution au fil du temps. Nous nous intéresserons aux profils socio-démographiques et artistiques des rappeurs, ainsi que leurs collaborations avec d'autres artistes, leur influence sur la scène musicale et l'impact des labels et des récompenses comme les Grammy Awards. Nous étudierons également l'évolution de la structure du champ rap et des relations entre les artistes à travers des dynamiques sociales et professionnelles, comme les rivalités, les collaborations, ou les alliances stratégiques. 
+En adoptant une démarche exploratoire, il s'agit de proposer un modèle du champ musical du rap , c'est-à-dire une représentation simplifiée de la structure de l'industrie du rap et de son évolution au fil du temps. Nous nous intéresserons aux profils socio-démographiques et artistiques des rappeurs, ainsi que leur influence sur la scène musicale et l'impact des labels et des récompenses comme les Grammy Awards. 
 
 ## Questions de recherche
 
