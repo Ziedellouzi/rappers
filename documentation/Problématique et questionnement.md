@@ -4,21 +4,18 @@ En adoptant une démarche exploratoire, il s'agit de proposer un modèle du cham
 
 ## Questions de recherche
 
-* Y a-t-il une corrélation entre les genres de rap (hip-hop, trap, etc.) et les origines sociales, géographiques, ou générationnelles des rappeurs ?
+* Y a-t-il une corrélation entre les genres de rap (hip-hop, trap, etc.) et lobtention d'un GRAMMY ?
 * Les collaborations entre rappeurs sont-elles influencées par leur position dans l'industrie musicale, leurs affiliations à certains labels ou leurs réseaux ?
-* Existe-t-il des relations de mentorat ou de rivalité (rappeurs maîtres-élèves, beefs, etc.) qui influencent les carrières et les collaborations ?
 * Comment les distinctions comme les Grammy Awards influencent-elles la carrière des rappeurs, leur popularité et leurs relations professionnelles ?
-* Quelle est l'influence des structures socio-économiques (comme les quartiers d'origine) sur la carrière des rappeurs et leur impact dans l'industrie musicale ?
-* Comment les rappeurs influencent-ils les autres artistes, et comment les mouvements sociaux (ex : Black Lives Matter) ou les événements culturels impactent-ils les dynamiques du rap américain ?
+* Quelle est l'influence des origines géographiques dans l'industrie musicale ?
+* quelle est l'influence des occupation sur les rappeur?
 
 ## Aspects de l'information à collecter
 
 * Origines géographiques et familiales des rappeurs
 * Formation et influences musicales
-* Collaborations avec d'autres artistes
 * Activités en dehors de la musique (entrepreneuriat, philanthropie, etc.)
 * Récompenses et distinctions (ex. Grammy Awards)
 * Appartenance à des labels ou organisations musicales
-* Rivalités et relations professionnelles (beefs, mentorat, etc.)
-* Réseaux sociaux et influence dans la culture populaire
+* les dates de naissances 
 
