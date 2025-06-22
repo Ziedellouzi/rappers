@@ -2,7 +2,7 @@
 
 
 
-
+## musical style
 ```sparql
 # Cette requête récupère les genres musicaux (P136) pour un échantillon de personnes (wd:Q5)
 # Elle est utilisée pour tester l’extraction avant l’insertion dans AllegroGraph
