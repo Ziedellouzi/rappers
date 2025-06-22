@@ -1,4 +1,4 @@
-# In this notebook we import the musical style, musical labels, award received 
+# In this notebook we import the musical style, record labels, award received 
 
 
 
@@ -127,7 +127,7 @@ GROUP BY ?genre ?genreLabel
 ORDER BY DESC(?n)
 LIMIT 50
 ```
-## musical labels  
+## record labels  
 ```sparql
 ### Récupère les labels musicaux (P264) pour chaque personne (Q5) + leurs labels
 
