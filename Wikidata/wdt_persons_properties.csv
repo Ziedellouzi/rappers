@@ -1,10 +1,10 @@
 p,propLabel,eff
-http://www.wikidata.org/prop/direct/P106,occupation,24194,important
+http://www.wikidata.org/prop/direct/P106,occupation,24194
 http://www.wikidata.org/prop/direct/P136,genre,10730,important
-http://www.wikidata.org/prop/direct/P569,date of birth,9328,important
+http://www.wikidata.org/prop/direct/P569,date of birth,9328
 http://www.wikidata.org/prop/direct/P31,instance of,9128
-http://www.wikidata.org/prop/direct/P21,sex or gender,9028,important
-http://www.wikidata.org/prop/direct/P27,country of citizenship,8319,important
+http://www.wikidata.org/prop/direct/P21,sex or gender,9028
+http://www.wikidata.org/prop/direct/P27,country of citizenship,8319
 http://www.wikidata.org/prop/direct/P1303,instrument,7607
 http://www.wikidata.org/prop/direct/P19,place of birth,7128
 http://www.wikidata.org/prop/direct/P742,pseudonym,6807
@@ -16,7 +16,7 @@ http://www.wikidata.org/prop/direct/P2031,work period (start),4888
 http://www.wikidata.org/prop/direct/P734,family name,4609
 http://www.wikidata.org/prop/direct/P8687,social media followers,4437
 http://www.wikidata.org/prop/direct/P18,image,4254
-http://www.wikidata.org/prop/direct/P264,record label,4021,important
+http://www.wikidata.org/prop/direct/P264,record label,4021
 http://www.wikidata.org/prop/direct/P646,Freebase ID,3874
 http://www.wikidata.org/prop/direct/P2002,X (Twitter) username,3714
 http://www.wikidata.org/prop/direct/P2003,Instagram username,3671
@@ -53,7 +53,7 @@ http://www.wikidata.org/prop/direct/P7212,LyricsTranslate ID,1161
 http://www.wikidata.org/prop/direct/P7194,AZLyrics.com artist ID,1154
 http://www.wikidata.org/prop/direct/P358,discography,1130
 http://www.wikidata.org/prop/direct/P7052,Jaxsta profile ID,1110
-http://www.wikidata.org/prop/direct/P166,award received,1095,important
+http://www.wikidata.org/prop/direct/P166,award received,1095
 http://www.wikidata.org/prop/direct/P103,native language,977
 http://www.wikidata.org/prop/direct/P10302,Film.ru person ID,919
 http://www.wikidata.org/prop/direct/P12098,Kinobox person ID,908
