@@ -4,7 +4,7 @@ En adoptant une démarche exploratoire, il s'agit de proposer un modèle du cham
 
 ## Questions de recherche
 * Est ce que les rappeurs font que du raps ?
-* Quels sont les genres musicale les plus frequents ?
+* Quels sont les genres musicals les plus frequents ?
 * Quelles sont les récompenses les plus prestigieuses que les rappeurs rêvent d'obtenir ?
 * Quelles sont les labels les plus connues et qui collaborent plus avec les rappeurs ? 
 * Y a-t-il une corrélation entre les genres de rap (hip-hop, trap, etc.) et lobtention d'une récompence ?
