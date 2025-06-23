@@ -4,7 +4,7 @@ En adoptant une démarche exploratoire, il s'agit de proposer un modèle du cham
 
 ## Questions de recherche
 
-* Y a-t-il une corrélation entre les genres de rap (hip-hop, trap, etc.) et lobtention d'un GRAMMY ?
+* Y a-t-il une corrélation entre les genres de rap (hip-hop, trap, etc.) et lobtention d'une récompence ?
 * Les collaborations entre rappeurs sont-elles influencées par leur position dans l'industrie musicale, leurs affiliations à certains labels ou leurs réseaux ?
 * Comment les distinctions comme les Grammy Awards influencent-elles la carrière des rappeurs, leur popularité et leurs relations professionnelles ?
 * Quelle est l'influence des citoyennetés dans l'industrie musicale ?
