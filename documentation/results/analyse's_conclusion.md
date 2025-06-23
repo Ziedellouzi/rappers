@@ -1,5 +1,7 @@
- #Analyse de la Répartition Géographique et Chronologique des Artistes de Rap 
- ##Distribution par continent
+ # Analyse de la Répartition Géographique et Chronologique des Artistes de Rap  
+ 
+ ## Distribution par continent 
+ 
 ![Capture d'écran 2025-06-24 000532](https://github.com/user-attachments/assets/15df9cff-d1fb-4b91-9528-dd8cc1e73c2e)
 - Amérique du Nord (Rouge) : Il y a une fréquence très élevée, ce qui indique que la majorité des artistes de rap dans cet ensemble de données proviennent d'Amérique du Nord.
 
