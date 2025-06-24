@@ -11,4 +11,4 @@ Ce projet vise à étudier les relations et les dynamiques sociales entre les ra
 * [Catalogue des information](Catalogue-des-information.md)
 
 ### Analyse des données existantes
-* [Exploring DBpedia\wikidata](https://github.com/Ziedellouzi/rappers/blob/main/documentation/DBpedia%5C%20wikidata_explorer.md)
+* [Exploring rewards_DBpedia\wikidata ](https://github.com/Ziedellouzi/rappers/blob/main/documentation/DBpedia%5C%20wikidata_explorer.md)
