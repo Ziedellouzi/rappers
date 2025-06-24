@@ -28,7 +28,8 @@ L'analyse géographique des artistes de rap met en évidence une forte dominatio
 - La baisse de l’effectif des rappeurs nés entre 1900 et 1925 peut s’expliquer par plusieurs facteurs historiques et socioculturels : 1 _ Le rap n’existait pas encore
                      Le hip-hop est né dans les années 1970 dans le Bronx à New York.
                      Avant cela, il n’existait pas de culture rap ni d’industrie musicale associée, donc les artistes nés                       avant 1925 n’étaient pas identifiés comme rappeurs.
-                 2 _  Contexte historique mondial
+
+   2 _  Contexte historique mondial
                       La période 1900-1925 inclut :
                       La Première Guerre mondiale (1914–1918) : perte de population, instabilité.
                       L’entre-deux-guerres : incertitude économique et sociale.
