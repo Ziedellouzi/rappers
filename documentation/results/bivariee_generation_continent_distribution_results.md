@@ -32,7 +32,7 @@ L'analyse géographique des artistes de rap met en évidence une forte dominatio
 
    2 _  Contexte historique mondial
                       La période 1900-1925 inclut :
-                      La Première Guerre mondiale (1914–1918) : perte de population, instabilité.
+                      La Première Guerre mondiale 1914 : perte de population, instabilité.
                       L’entre-deux-guerres : incertitude économique et sociale.
                      Cela a influencé négativement la naissance, la survie et la documentation des artistes.
 
