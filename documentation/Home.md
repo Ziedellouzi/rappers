@@ -6,7 +6,7 @@ Ce projet vise à étudier les relations et les dynamiques sociales entre les ra
 
 ### Phase exploratoire
 
-* [Problématique et questionnement](Problematique-Questionnement.md)
+* [Problématique et questionnement](Problématique-et-questionnement.md)
 * [Liste des rappeurs ](Listes-des-rappeurs.md)
 * [Catalogue des information](Catalogue-des-information.md)
 
