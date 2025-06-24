@@ -25,6 +25,14 @@ L'analyse géographique des artistes de rap met en évidence une forte dominatio
 - 1950-1975 : Un léger accroissement du nombre d'artistes, ce qui marque les premières influences du rap moderne.
 
 - 1975-2000 : Un pic massif, particulièrement autour de la période 1975-2000, qui correspond à l'émergence et à l'essor mondial du rap et du hip-hop. C'est cette période qui enregistre le plus grand nombre d'artistes de rap.
+- La baisse de l’effectif des rappeurs nés entre 1900 et 1925 peut s’expliquer par plusieurs facteurs historiques et socioculturels : 1 _ Le rap n’existait pas encore
+                     Le hip-hop est né dans les années 1970 dans le Bronx à New York.
+                     Avant cela, il n’existait pas de culture rap ni d’industrie musicale associée, donc les artistes nés                       avant 1925 n’étaient pas identifiés comme rappeurs.
+                 2 _  Contexte historique mondial
+                      La période 1900-1925 inclut :
+                      La Première Guerre mondiale (1914–1918) : perte de population, instabilité.
+                      L’entre-deux-guerres : incertitude économique et sociale.
+                     Cela a influencé négativement la naissance, la survie et la documentation des artistes.
 
 ## Distribution des naissances par génération et continent 
 
