@@ -3,9 +3,9 @@
  ## Distribution par continent 
  
 ![Capture d'écran 2025-06-24 000532](https://github.com/user-attachments/assets/15df9cff-d1fb-4b91-9528-dd8cc1e73c2e)
-- Amérique du Nord (Rouge) : Il y a une fréquence très élevée, ce qui indique que la majorité des artistes de rap dans cet ensemble de données proviennent d'Amérique du Nord.
+- Amérique du Nord (Gris) : Il y a une fréquence très élevée, ce qui indique que la majorité des artistes de rap dans cet ensemble de données proviennent d'Amérique du Nord.
 
-- Europe (Gris) : La fréquence est également significative, bien que moins élevée que celle de l'Amérique du Nord.
+- Europe (rouge) : La fréquence est également significative, bien que moins élevée que celle de l'Amérique du Nord.
 
 - Afrique (Bleu) et Asie (Orange) : Ces deux continents sont également représentés, mais avec une fréquence beaucoup plus faible.
 
